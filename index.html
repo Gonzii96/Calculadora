@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <style>
+      /* Agrega estilos adicionales según el tema */
+      body {
+        background-color: #fff;
+        color: #333;
+      }
+
+      #historial {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Pantalla de la calculadora -->
+    <input id="pantalla" type="text" readonly />
+
+    <!-- Botones de la calculadora -->
+    <div>
+      <button onclick="limpiarPantalla()">C</button>
+      <button onclick="cambiarMoneda()">S</button>
+      <button onclick="agregarOperacion('**')">^</button>
+      <button onclick="calcularRaizCuadrada()">√</button>
+    </div>
+    <div>
+      <button onclick="agregarNumero('7')">7</button>
+      <button onclick="agregarNumero('8')">8</button>
+      <button onclick="agregarNumero('9')">9</button>
+      <button onclick="establecerOperador('/')">/</button>
+    </div>
+    <div>
+      <button onclick="agregarNumero('4')">4</button>
+      <button onclick="agregarNumero('5')">5</button>
+      <button onclick="agregarNumero('6')">6</button>
+      <button onclick="establecerOperador('*')">*</button>
+    </div>
+    <div>
+      <button onclick="agregarNumero('1')">1</button>
+      <button onclick="agregarNumero('2')">2</button>
+      <button onclick="agregarNumero('3')">3</button>
+      <button onclick="establecerOperador('-')">-</button>
+    </div>
+    <div>
+      <button onclick="agregarNumero('0')">0</button>
+      <button onclick="agregarNumero('.')">.</button>
+      <button onclick="calcularResultado()">=</button>
+      <button onclick="establecerOperador('+')">+</button>
+    </div>
+
+    <!-- Botón de borrar y área de historial -->
+    <div>
+      <button onclick="borrarUltimo()">Borrar</button>
+    </div>
+    <div>
+      <!-- Agrega esta div para mostrar el historial -->
+      <div id="historial"></div>
+    </div>
+
+    <!-- Agrega este script para manejar las teclas del teclado -->
+    <script>
+      document.addEventListener("keydown", function (event) {
+        manejarTecla(event.key);
+      });
+    </script>
+
+    <!-- Script principal -->
+    <script src="calculadora.js"></script>
+  </body>
+</html>

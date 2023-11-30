@@ -1,0 +1,40 @@
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+#pantalla {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-color: #000;
+  color: #0f0; /* Verde neón */
+  border: none;
+  outline: none;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  margin: 5px;
+  background-color: #000;
+  color: #0f0;
+  border: 2px solid #0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #0f0;
+  color: #000;
+}
+
+#historial {
+  font-size: 14px;
+  margin-top: 20px;
+}
